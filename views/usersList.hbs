@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h2>Lista użytkowników:</h2>
+
+  {{#each users}}
+    <div class="card mb-3">
+      <div class="card-body">
+        <h3 class="card-title">{{name}}</h3>
+        <h4 class="card-text">Adres:</h4>
+        <p class="card-text">Ulica: {{address.street}}</p>
+        <p class="card-text">Mieszkanie: {{address.suite}}</p>
+        <p class="card-text">Miasto: {{address.city}}</p>
+        <p class="card-text">Kod pocztowy: {{address.zipcode}}</p>
+        <p class="card-text">Lokalizacja: {{address.geo.lat}}, {{address.geo.lng}}</p>
+        <a href="http://www.{{website}}">www.{{website}}</a>
+      </div>
+    </div>
+  {{/each}}
+
+</div>
